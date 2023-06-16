@@ -11,10 +11,11 @@
     body{
      background-color: black;
      color: white;
- 
+     height: 100%;
     }
 
     h1{
+    background-color: black;
     margin: 2;
     margin-bottom: 20px;
     }
@@ -24,6 +25,7 @@
     }
 
     p{
+        background-color: black;
         margin-bottom: 15px;
     }
 
@@ -67,6 +69,13 @@
         color: black;
     }
 
+    #matrix {
+        z-index: -100;
+        position: fixed;
+        display: flex;
+        width: 100%;
+    } 
+
     #response {
     margin-top: 50px;
     font-size: 24px;
@@ -82,6 +91,9 @@
     font-style: italic;
     border-radius: 20px;
     color: rgb(0, 0, 0);
+    }
+    #game-container{
+        background-color: black;
     }
 
     .slider{
