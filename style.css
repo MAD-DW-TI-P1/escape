@@ -3,10 +3,6 @@
 
 /* Paleta de colores: lime / negro / blanco */
 
-html {
-    height: 100%;
-    overflow: hidden;
-}
 
 body {
     background-color: black!important;
@@ -33,8 +29,8 @@ button, a {
 
 div.init {
     background-color: rgba(0,0,0,0.8);
-    min-height: 500px;
-    padding:100px;
-    margin: 100px;
+    min-height: 400px;
+    padding:10%;
+    margin: 10%;
 }
 
