@@ -1,7 +1,40 @@
-body { 
-    background-color:black;
-    font-size: 2em;
-    color: green;
-    font-family: monospace;
-    padding: 40px
+/* Tipografía */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Paleta de colores: lime / negro / blanco */
+
+html {
+    height: 100%;
+    overflow: hidden;
 }
+
+body {
+    background-color: black!important;
+    color: lime!important;
+    font-family: 'Space Mono', monospace!important;
+    margin: 0;
+    height: 100%;
+
+}
+
+button, a {
+    padding: 10px!important;
+    background: lime!important;
+    outline: none!important;
+    border-radius: 10px!important;
+    border: 1px solid white!important;
+    color: black!important;
+}
+
+#matrix {
+    z-index: -100;
+    position: absolute;
+}
+
+div.init {
+    background-color: rgba(0,0,0,0.8);
+    min-height: 500px;
+    padding:100px;
+    margin: 100px;
+}
+
