@@ -33,4 +33,7 @@ div.init {
     padding:10%;
     margin: 10%;
 }
+div.init img {
+    width: 100%;
+}
 

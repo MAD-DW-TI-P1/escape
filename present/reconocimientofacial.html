@@ -89,8 +89,23 @@
                         tmPose.drawKeypoints(pose.keypoints, minPartConfidence, ctx);
                         tmPose.drawSkeleton(pose.keypoints, minPartConfidence, ctx);
                     }
+                    check()
                 }
             }
+
+            function check() {
+                label = document.getElementById('label-container');
+                persona = label.getElementsByTagName('div')[0];
+                if (persona.textContent.includes("1.0")) {
+                    console.log("La cadena contiene '1.0'.");
+                    alert ('¡Eres una persona! ¡Corre mete esta url: https://escape.coderf5.es/yoda.html y continúa avanzando!')
+                } else {
+                    console.log("La cadena no contiene '1.0'.");
+                    //alert ('¡Nunca nos rendiremos máquinas!')
+                    
+                }
+            }
+
         </script>
         <script src="../matrix.js"></script>           
     </body>
