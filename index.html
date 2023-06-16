@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    
+   
+    <title>Resuelve las preguntas</title>
+</head>
+<body>
+<section id="contenedor">
+
+ <div class="banner">
+  <h1>¡Rescatemos al Perrito Policia que ha sido secuestrado!</h1>
+</div>
+
+<div class="preguntas">
+  
+        <form action="">
+            <div id="preguntas-container">
+                <!-- Las preguntas generadas dinámicamente se agregarán aquí -->
+            </div>
+            <br>
+            <button id="enviar-btn" class="btn btn-dark"><strong>Enviar <br> Respuestas</strong></button>
+            <br>
+        </form>
+ 
+      </div>
+
+    <h3 id="token" style="display: none;"></h3>
+
+    <br>
+
+    <div class="pistas">
+    <p ><strong>Pistas para obtener el token:</strong>  <br>
+      <p>1. la segunda vocal de la respuesta es la primera letra en mayúscula del token </p>
+        <p>2. el número de movimientos multiplicado por 4 es la segunda parte del token </p>
+          <p>3. el número que imprima +1 es la letra del abecedario en español es la tercera clave del token </p>
+            <p>4. la cuarta parte 	del token es la propiedad antes de los dos puntos </p>
+              <p>5. la quinta parte es la traducción al español de la respuesta </p>
+                <p>6. la sexta parte del token es la respuesta misma </p>
+                  <p>7. la séptima parte del token es la respuesta </p>
+                    <p>8. El camino que recorriste +1punto te dará la respuesta para liberarme, junta las claves de las respuestas y verifica si el token es seguro.  </p>
+                  </div>
+
+<div class="negro"></div>
+    <div class="contrasena">
+        <h1>Validar Contraseña</h1>
+    
+        <label for="contrasena" class="token">
+        <p>Token:</p></label>
+        <input type="password" id="contrasena" name="contrasena">
+        <br>
+        <button id="validarBtn" class="btn btn-dark"><strong>Validar</strong></button>
+        <p id="resultado"></p>
+    </div>
+
+      <script>
+        document.getElementById('validarBtn').addEventListener('click', function () {
+            var contrasena = document.getElementById('contrasena').value;
+
+            // Verificar si la contraseña coincide con la contraseña correcta
+            if (contrasena === 'A32otext-alignprimerhijo813112221+.') {
+              alert('¡Felicidades! Has rescatado al perrito.');
+            } else {
+              alert('La contraseña es incorrecta. Inténtalo de nuevo.');
+            }
+
+            // Verificar la longitud mínima
+            if (contrasena.length < 8) {
+              resultado.textContent = 'La contraseña debe tener al menos 8 caracteres.';
+              return;
+            }
+
+            // Verificar si hay espacios en blanco
+            if (contrasena.indexOf(' ') !== -1) {
+              resultado.textContent = 'La contraseña no debe contener espacios en blanco.';
+              return;
+            }
+
+            // Verificar la presencia de al menos un número
+            if (!/\d/.test(contrasena)) {
+              resultado.textContent = 'La contraseña debe incluir al menos un número.';
+              return;
+            }
+
+            // Verificar la presencia de letras mayúsculas y minúsculas
+            if (!/[a-z]/.test(contrasena) || !/[A-Z]/.test(contrasena)) {
+              resultado.textContent = 'La contraseña debe incluir una combinación de letras mayúsculas y minúsculas.';
+              return;
+            }
+
+            // Verificar la presencia de caracteres especiales
+            if (!/[-*?!@#$/(){}=.,;:]/.test(contrasena)) {
+              resultado.textContent = 'La contraseña debe incluir al menos un carácter especial.';
+              return;
+            }
+
+            // Verificar patrones comunes a evitar
+            if (/(.)\1{2,}/.test(contrasena)) {
+              resultado.textContent = 'La contraseña no debe contener caracteres repetidos consecutivamente más de dos veces.';
+              return;
+            }
+
+            // La contraseña cumple con todos los requisitos
+            resultado.textContent = 'La contraseña es segura.';
+  });
+      </script>
+
+
+</section>
+</div>
+   <script src="/index.js"></script>
+</body>
+</html>
