@@ -54,3 +54,27 @@ inputLetraT.addEventListener("change", function () {
 }
 });       
 
+
+function verificarTodosElementosVerdes() {
+  const elementos = ["letraN", "letraE", "letraK", "letraO", "letraT"];
+  for (let i = 0; i < elementos.length; i++) {
+    const elemento = document.getElementById(elementos[i]);
+    if (elemento.style.backgroundColor !== "green") {
+      return false;
+    }
+  }
+  return true;
+}
+
+function mostrarMensaje() {
+  if (verificarTodosElementosVerdes()) {
+    const mensaje = document.getElementById("mensaje");
+    mensaje.textContent = "Genial, has consegido pasar todas las CIBER PRUEBAS." + " El siguiente enlace es: '/xsdacd'." ;
+  } else {
+    const mensaje = document.getElementById("mensaje");
+    mensaje.textContent = "No todos los elementos son verdes";
+  }
+}
+
+const btnValidar = document.getElementById("btnValidar");
+btnValidar.addEventListener("click", mostrarMensaje);
