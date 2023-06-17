@@ -11,8 +11,12 @@
         <section class="container text-center init">
             <div class="init">
                 <h1>Reconocimiento facial</h1>
+                <br/>
+                <br/>
                 <div><canvas id="canvas"></canvas></div>
                 <div id="label-container"></div>
+                <br/>
+                <br/>
                 <button type="button" onclick="init()">Inciar</button>
                 <br/>
                 <br/>
@@ -117,6 +121,7 @@
                 } else {
                     console.log("La cadena no contiene '1.0'");
                     console.log('¡Nunca nos rendiremos máquinas!')
+                    document.getElementById('persona').classList.add('invisible');
                     
                 }
             }
