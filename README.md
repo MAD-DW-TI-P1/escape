@@ -18,6 +18,17 @@ Prepárate para demostrar tu valía en la "Academia de  ciberseguridad", donde t
 Recuerda que en este mundo, el todo es más que la suma de las partes. ¡Demuestra tu capacidad para trabajar en equipo y tu destreza individual para sobresalir en la Academia de Cyberpolicía! ¿Estás listo para aceptar este desafío y hacer historia en la lucha por la seguridad cibernética? ¡La decisión es tuya!
 
 ---
+## Pruebas
+
+<p align="center">
+  <img src="" width="" height="">
+  <img src="" width="" height="">
+</p>
+
+<p align="center">
+  <img src="" width="" height="">
+</p>
+---
 ## Tecnologías <br>
 <p align="center"> 
   <img src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png" width="75" height="75">
