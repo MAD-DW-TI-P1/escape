@@ -1,0 +1,91 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+}
+
+#escape-room {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 800px;
+    border: 2px solid #888;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #222;
+}
+
+#timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+#timer {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+#timer-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #888;
+}
+
+.room {
+    display: none;
+}
+
+.room.active {
+    display: block;
+}
+
+.room h1 {
+    margin-bottom: 1em;
+}
+
+#question-container {
+    margin-bottom: 1em;
+}
+
+#submit-button,
+#hint-button {
+    background-color: #f00;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#submit-button:hover,
+#hint-button:hover {
+    background-color: #ff4a4a;
+}
+
+#hint-container {
+    margin-bottom: 1em;
+}
+
+#hint-button {
+    background-color: #00f;
+    color: #fff;
+    margin-left: 1em;
+}
+
+.blinking-element {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
