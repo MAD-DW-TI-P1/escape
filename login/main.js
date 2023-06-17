@@ -67,7 +67,7 @@ loginButton.addEventListener("click", (e) => {
         alert(
             "¡Bien hecho! \nRecuerda que las contraseñas deberían tener siempre mayúsculas, minúsculas, números y caracteres especiales. Y nada de poner el nombre de tu perro..."
         );
-        window.location.pathname = "/escape/login_captcha/captcha/index.html"; //Cambiar por la página en cuestión
+        window.location.pathname = "/captcha"; //Cambiar por la página en cuestión
     } else {
         switch (counter) {
             case 0:
