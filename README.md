@@ -4,11 +4,11 @@
 </p>
 
 
-# $${\color{lightgreen}escape}$$
+# _<p align="center">escape</p>_
 
 ---
 
-${\color{lightgreen}Aquí \ comienza \ la \ aventura}$
+Aquí comienza la aventura
 
 ## Bienvenido al emocionante mundo del futuro en el año 2045, donde la tecnología y la ciberseguridad se han convertido en los mayores desafíos para la humanidad. <br>
 
