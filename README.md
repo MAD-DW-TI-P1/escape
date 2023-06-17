@@ -28,8 +28,11 @@ Recuerda que en este mundo, el todo es más que la suma de las partes. ¡Demuest
 <p align="center">
   <img src="" width="" height="">
 </p>
+
 ---
+
 ## Tecnologías <br>
+
 <p align="center"> 
   <img src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png" width="75" height="75">
   <img src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png" width="75" height="75">
