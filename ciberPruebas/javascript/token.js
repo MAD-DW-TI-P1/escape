@@ -69,7 +69,7 @@ function verificarTodosElementosVerdes() {
 function mostrarMensaje() {
   if (verificarTodosElementosVerdes()) {
     const mensaje = document.getElementById("mensaje");
-    mensaje.textContent = "Genial, has consegido pasar todas las CIBER PRUEBAS." + " El siguiente enlace es: '/xsdacd'." ;
+    mensaje.textContent = "Genial, has consegido pasar todas las CIBER PRUEBAS." + " El siguiente enlace es: '/homatrix'." ;
   } else {
     const mensaje = document.getElementById("mensaje");
     mensaje.textContent = "No todos los elementos son verdes";
