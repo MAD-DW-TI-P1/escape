@@ -35,7 +35,7 @@ function verificarContraseña2() {
   // Comprobar la contraseña
   if (contraseña === "casi") {
     return (
-      open('../rescue_dog/index.html')
+      open('../rescue')
     );
   } else {
     alert("Contraseña incorrecta");

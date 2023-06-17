@@ -26,7 +26,7 @@ function updateCountdown() {
 }
 
 // Preguntas por sala
-const rooms = ['Sala 1 - Firewall', 'Sala 2 - Encriptación', 'Sala 3 - Auditoría de Seguridad'];
+const rooms = ['Firewall', 'Encriptación', 'Auditoría de Seguridad'];
 let currentRoomIndex = 0;
 
 const questions = [
@@ -147,8 +147,8 @@ function endGame(won) {
     hintButton.disabled = true;
 
     if (won) {
-        questionContainer.textContent = '¡Has escapado con éxito de todas las salas! tu URL es: /ciberPruebas/index.html';
-        window.location.href = "../ciberPruebas";
+        questionContainer.textContent = '¡Has escapado con éxito de todas las salas! tu URL es: /ciberpruebas/';
+        window.location.href = "../ciberpruebas";
     } else {
         questionContainer.textContent = 'Has fallado en escapar de las salas de ciberseguridad. ¡Mejor suerte la próxima vez!';
     }
