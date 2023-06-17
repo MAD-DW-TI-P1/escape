@@ -148,6 +148,7 @@ function endGame(won) {
 
     if (won) {
         questionContainer.textContent = '¡Has escapado con éxito de todas las salas! tu URL es: /ciberPruebas/index.html';
+        window.location.href = "../ciberPruebas";
     } else {
         questionContainer.textContent = 'Has fallado en escapar de las salas de ciberseguridad. ¡Mejor suerte la próxima vez!';
     }

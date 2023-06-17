@@ -3,7 +3,7 @@ const abejita = document.querySelector('.abeja');
 
 abejita.addEventListener('click', function () {
 
-  window.location.href = 'https://github.com/signados/escape/tree/main';
+  window.location.href = '/escape-end';
 });
 
 const canvas = document.getElementById('matrixCanvas');
