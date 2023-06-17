@@ -14,6 +14,12 @@
                 <div><canvas id="canvas"></canvas></div>
                 <div id="label-container"></div>
                 <button type="button" onclick="init()">Inciar</button>
+                <br/>
+                <br/>
+                <div id="persona" class="invisible">
+                    <p></p>
+                </div>
+
             </div>
         </section>
         <footer>
@@ -28,6 +34,7 @@
             // the link to your model provided by Teachable Machine export panel
             const URL = "./my_model/";
             let model, webcam, ctx, labelContainer, maxPredictions;
+            const urlNext = "/login_captcha";
 
             async function init() {
                 const modelURL = URL + "model.json";
@@ -93,15 +100,23 @@
                 }
             }
 
+            function persona() {
+                console.log("La cadena contiene '1.0'.");
+                mensaje = `¡Eres una persona! ¡Corre mete esta url: ${urlNext} y continúa avanzando!`;
+                document.getElementById('persona').classList.remove('invisible');
+                document.getElementById('persona').getElementsByTagName('p')[0].innerHTML = mensaje; 
+            }
+
             function check() {
                 label = document.getElementById('label-container');
                 persona = label.getElementsByTagName('div')[0];
                 if (persona.textContent.includes("1.0")) {
-                    console.log("La cadena contiene '1.0'.");
-                    alert ('¡Eres una persona! ¡Corre mete esta url: https://escape.coderf5.es/yoda.html y continúa avanzando!')
+                    setTimeout(() => {
+                        persona()
+                    }, "3000");
                 } else {
-                    console.log("La cadena no contiene '1.0'.");
-                    //alert ('¡Nunca nos rendiremos máquinas!')
+                    console.log("La cadena no contiene '1.0'");
+                    console.log('¡Nunca nos rendiremos máquinas!')
                     
                 }
             }
