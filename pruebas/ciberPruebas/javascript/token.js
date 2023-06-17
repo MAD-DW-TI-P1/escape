@@ -65,7 +65,7 @@ function verificarTodosElementosVerdes() {
   }
   return true;
 }
-
+// Añadir la URL de la siguiente página
 function mostrarMensaje() {
   if (verificarTodosElementosVerdes()) {
     const mensaje = document.getElementById("mensaje");
