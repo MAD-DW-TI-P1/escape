@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+  background-color: black;
+  margin: 0;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+}
+
+#matrixCanvas {
+  z-index: -100;
+  position: absolute;
+}
+
+.abeja {
+  width: 150px;
+  animation-name: abeja;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  margin-left: 500px;
+  margin-bottom: 700px;
+
+}
+
+@keyframes abeja {
+  0% {
+    transform: translate(200px);
+  }
+
+  50% {
+    transform: translateY(300px);
+  }
+
+  60% {
+    transform: translateZ(200px);
+    width: 100px;
+  }
+
+  80% {
+    transform: translateY(250px);
+    width: 100px;
+  }
+
+  100% {
+    transform: translateX(200px);
+  }
+
+}
+
+.final {
+  margin-left: 200px;
+}
+
+h1 {
+  margin-left: 25px;
+  margin: 30px;
+  color: rgb(255, 255, 255);
+  font-family: 'Space Mono', monospace;
+  text-align: center;
+  padding: 30px;
+  font-size: 50px;
+}
+ p {
+  margin-left: 25px;
+  margin: 30px;
+  color: rgb(255, 255, 255);
+  font-family: 'Space Mono', monospace;
+  text-align: center;
+  padding: 30px;
+  font-size: 30px;
+ }
