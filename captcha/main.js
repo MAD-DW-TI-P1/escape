@@ -59,7 +59,7 @@ function verificarSeleccion() {
 
   if (sonCorrectas && imagenesSeleccionadas.length === imagenesCorrectas.length) {
     alert("¡Captcha aprobado! Eres humano.");
-    window.location.href = "https://github.com/";
+    window.location.href = "../qr";
   } else {
     alert("Captcha no aprobado. Por favor, inténtalo de nuevo.");
   }
