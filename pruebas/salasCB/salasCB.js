@@ -147,7 +147,7 @@ function endGame(won) {
     hintButton.disabled = true;
 
     if (won) {
-        questionContainer.textContent = '¡Has escapado con éxito de todas las salas de ciberseguridad!';
+        questionContainer.textContent = '¡Has escapado con éxito de todas las salas! tu URL es: /ciberPruebas/index.html';
     } else {
         questionContainer.textContent = 'Has fallado en escapar de las salas de ciberseguridad. ¡Mejor suerte la próxima vez!';
     }
