@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="web.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="slider" id="pantalla">
+        <canvas id="matrix"></canvas>
+        <div class="container" id="pag0">
+            <h1>CIBER PRUEBAS</h1>
+        </div>
+        <div class="container" id="pag1">
+            <h1>Adivina el correo phishing</h1>
+            <div id="game-container">
+            <div id="email-subject"></div>
+            <div id="email-sender"></div>
+            <div id="email-body"></div>
+            <br>
+            <input type="text" id="guess-input" placeholder="Enter your guess (yes/no)">
+            <button id="guess-button">Enviar</button>
+            <div id="result1"></div>
+            <!-- <button id="next-button">Finalizar</button> -->
+            </div>
+            <script src="javascript/phishing.js"></script>
+        </div>
+    
+        <div class="container" id="pag2" >
+            <h1>Pon a prueba tu memoria: <span id="result"></span></h1>
+            <div class="grid"></div>
+            <script src="javascript/memory.js" charset="utf-8"></script>
+        </div>
+
+        <div class="container" id="pag3">
+            <h1>¡Bienvenido al acertijo cifrado!</h1>
+            <p>Para resolver este acertijo, debes adivinar qué letra ha sido cifrada.</p>
+            <p><ins>Agudiza tu ingenio con estas pistas:</ins></p>
+            <p class="pistas"><b>Es una letra muy pesada.<br>En braile te da tres puntos.</b></p>
+
+            <form>
+            <label for="respuesta">Prueba tu respuesta aquí:</label>
+            <input type="text" id="respuesta" name="respuesta"><br><br>
+            <button type="submit" onclick="verificarRespuesta()">Enviar</button>
+            </form>
+            <script src="javascript/cesar.js" charset="utf-8"></script>
+        </div>
+        <div class="container" id="pag4"">
+            <h1>Crea una Contraseña Segura</h1>
+            <label for="contraseña">Ingrese una contraseña:</label>
+            <input type="password" id="contraseña">
+            <br>
+            <button onclick="evaluarContraseña()">Evaluar</button>
+            <p id="result2"></p>
+            <script src="javascript/password.js" charset="utf-8"></script>
+        </div>
+        <div class="container" id="pag5">
+            <h1>Desafío de Cifrado y Descifrado</h1>
+            <p>En lo profundo de la noche, en un manto estrellado,<br>
+              un secreto ancestral ha sido cifrado y guardado.<br>
+              Un mensaje oculto, una letra por revelar,<br>
+              enigma ancestral que debes descifrar.</p>
+            <textarea id="input-text" placeholder="Prueba con una frase"></textarea>
+            <br>
+            <div class="eleccion">
+                <button onclick="cifrar()">Cifrar</button>
+                <button onclick="descifrar()">Descifrar</button>
+            </div>
+            <br>
+            <textarea id="output-text" placeholder="¿?" readonly></textarea>
+            <script src="javascript/cifrado.js" charset="utf-8"></script>
+
+        </div>
+        <div class="container" id="pag6">
+            <h1>¿Sabes cuál es la palabra secreta?</h1>
+            <div class="divLetras">
+                <input class="letra" type="text" id="letraN">
+                <input class="letra" type="text" id="letraE">
+                <input class="letra" type="text" id="letraK">
+                <input class="letra" type="text" id="letraO">
+                <input class="letra" type="text" id="letraT">
+            </div>
+            <script src="javascript/token.js" charset="utf-8"></script>
+        </div>
+    </section>
+    <script src="matrix.js"></script>
+</body>
+</html>
