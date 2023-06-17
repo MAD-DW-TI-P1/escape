@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
+
+body{
+   background-color: black;
+}
+
+
+h1{
+    font-family: 'Space Mono', monospace;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+    color: lime;
+
+}
+.escondido{
+    padding: 40px;
+    color: black;
+    margin-top: 350px;
+    font-family: 'Space Mono', monospace;
+    margin-left: 400px;
+    animation-name: mover;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#c_transparente {
+
+    margin-top: auto;
+    padding: 50px;
+
+
+}
+
+a {
+    text-decoration: none;
+    cursor: default;
+    color: black;
+}
+
+.uno{
+    margin-top: 100px;
+    margin-left: 100px;
+    position: absolute;
+}
+.dos{
+    margin-top: 20px;
+    margin-left: 100px;
+    position: absolute;
+}
+.tres{
+    margin-top: 60px;
+    margin-left: 300px;
+    position: absolute;
+}
+.centrar{
+    display: flex;
+    justify-content: space-around;
+}
+.pista{
+    max-width: 500px;
+    
+}
+.centrar2{
+    margin-top: 35px;
+    width: fit-content;
+    margin-right: 50px;
+    margin-left: 400px;
+  
+}
+
+.final {
+  margin-left: 200px;  
+}
+
+.final h1 {
+    margin-left: 25px;  
+    padding: 20px;
+    margin: 30px;
+    color:white;
+  }
+  
+
+.esoterico p {
+    max-width: 500px;
+    color: lime;
+    padding: 50px;
+
+}
+.centrar3 button{
+   color: rgb(0, 0, 0);
+   padding: 1px;
+   
+
+}
+.esoterico  {
+    max-width: 500px;
+    color: lime;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 350px;
+
+  
+
+}
+.abeja{
+    margin-top: 100px;
+    margin-left: 300px;
+    width: 50px;
+    animation-name: abeja;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+
+button {
+    padding: 10px;
+    background: lime;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid white;
+    color: black;
+    }
+
+@keyframes abeja {
+    0%{
+        transform: translate(200px);
+    }
+    50%{
+        transform: translateY(300px);
+    }
+    60%{
+        transform: translateZ(200px);
+        width: 100px;
+    }
+    80%{
+        transform: translateY(250px);
+        width: 100px;
+    }
+
+    100%{
+        transform: translateX(200px);
+    }
+    
+}
