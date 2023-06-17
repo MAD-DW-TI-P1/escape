@@ -1,0 +1,41 @@
+.abeja {
+  width: 150px;
+  animation-name: abeja;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  margin-left: 500px;
+  margin-bottom: 700px;
+}
+
+@keyframes abeja {
+  0% {
+    transform: translate(200px);
+  }
+
+  50% {
+    transform: translateY(300px);
+  }
+
+  60% {
+    transform: translateZ(200px);
+    width: 100px;
+  }
+
+  80% {
+    transform: translateY(250px);
+    width: 100px;
+  }
+
+  100% {
+    transform: translateX(200px);
+  }
+}
+
+.final {
+  margin-left: 200px;
+}
+
+h1, p {
+  margin: 0px;
+  padding: 50px;
+}

@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <title>Captcha de Verificación</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-
-</head>
-
-<body>
-    
-    <canvas id="Matrix"></canvas>
-
-    <h1>Verifica el captcha para poder registrarte</h1>
-
-    <div id="imageGrid"></div>
-
-    <div class="botones">
-        <button id="verifyBtn">Verificar</button>
-        <button class="boton2" id="refreshBtn">Refrescar</button>
-    </div>
-
-    <script src="main.js"></script>
-
-</body>
-
+    <head>
+        <title>Captcha de Verificación</title>
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    </head>
+    <body> 
+        <section class="container text-center init">
+            <div class="init">
+                <h1>Selecciona los gatitos</h1>
+                <br/>
+                <div id="imageGrid"></div>
+                <br/>
+                <div class="botones">
+                    <button id="verifyBtn">Verificar</button>
+                    <button class="boton2" id="refreshBtn">Refrescar</button>
+                </div>
+            </div>
+        </section>
+        <script src="main.js"></script>
+    </body>
 </html>

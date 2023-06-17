@@ -33,62 +33,46 @@ const questions = [
      // Sala 1 - Firewall
      [
         {
-            question: '¿Cuál es la función principal de un Firewall en ciberseguridad?',
-            answer: 'Proteger la red',
-            hint: 'Empieza con la letra "P"'
+            question: '¿El Firewall protege la red?',
+            answer: 'Sí',
+            hint: 'El firewall en terminos generales es una barrera de seguridad'
         },
         {
-            question: '¿Qué tipo de tráfico un Firewall puede bloquear para prevenir ataques?',
-            answer: 'Tráfico malicioso',
-            hint: 'Contiene las letras "T", "m" y "s"'
-        },
-        {
-            question: '¿Cuál es la regla comúnmente utilizada para permitir o denegar el acceso en un Firewall?',
-            answer: 'Regla de acceso',
-            hint: 'Tiene 3 palabras'
+            question: '¿El Firewall puede bloquear tráfico malicioso?',
+            answer: 'Sí',
+            hint: 'El firewall en terminos generales es una barrera de seguridad'
         }
     ],
 
     // Sala 2 - Encriptación
     [
         {
-            question: '¿Qué es la encriptación en ciberseguridad?',
-            answer: 'Proceso de convertir datos en código',
-            hint: 'Tiene 6 palabras'
+            question: '¿El cifrado asimétrico es más seguro que el simétrico?',
+            answer: 'Sí',
+            hint: 'Piensa que es más seguro no enviar la contraseña'
         },
         {
-            question: '¿Qué tipo de clave se utiliza en la encriptación simétrica?',
-            answer: 'Clave única',
-            hint: 'Tiene 2 palabras'
-        },
-        {
-            question: '¿Cuál es el algoritmo de encriptación ampliamente utilizado para proteger conexiones seguras en la web?',
-            answer: 'SSL/TLS',
-            hint: 'Contiene las letras "S", "L" y "T"'
+            question: 'En el cifrado asimétrico tienes dos claves que juntas desencriptan el mensaje',
+            answer: 'Sí',
+            hint: 'Clave pública y privada'
         }
     ],
 
     // Sala 3 - Auditoría de Seguridad
     [
         {
-            question: '¿Qué es la auditoría de seguridad en ciberseguridad?',
-            answer: 'Evaluación de la seguridad de un sistema',
-            hint: 'Tiene 5 palabras'
+            question: '¿Es recomendable tener copias de seguridad de los datos sensibles?',
+            answer: 'Sí',
+            hint: 'Qué pasaría si perdemos todos los datos?'
         },
         {
-            question: '¿Cuál es el objetivo principal de una auditoría de seguridad?',
-            answer: 'Identificar vulnerabilidades',
-            hint: 'Empieza con la letra "I"'
-        },
-        {
-            question: '¿Qué tipo de pruebas se realizan durante una auditoría de seguridad?',
-            answer: 'Pruebas de penetración',
-            hint: 'Tiene 3 palabras'
+            question: '¿Es recomendable hacer click en enlaces de correos electrónicos de remitentes desconocidos?',
+            answer: 'No',
+            hint: 'Nunca sabemos qué puede haber detrás de un enlace'
         }
     ]
     // Agrega más salas con sus respectivas preguntas según sea necesario
 ];
-
 
 const roomTitleElement = document.getElementById('room-title');
 const roomContainer = document.getElementById('room-container');
@@ -147,10 +131,10 @@ function endGame(won) {
     hintButton.disabled = true;
 
     if (won) {
-        questionContainer.textContent = '¡Has escapado con éxito de todas las salas! tu URL es: /ciberpruebas/';
+        questionContainer.textContent = '¡Has escapado con éxito! tu URL es: /ciberpruebas/';
         window.location.href = "../ciberpruebas";
     } else {
-        questionContainer.textContent = 'Has fallado en escapar de las salas de ciberseguridad. ¡Mejor suerte la próxima vez!';
+        questionContainer.textContent = 'Has fallado. ¡Mejor suerte la próxima vez! Puedes recargar...';
     }
 }
 

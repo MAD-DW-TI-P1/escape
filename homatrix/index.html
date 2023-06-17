@@ -1,120 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../styles2.css" type="text/css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scape Code</title>
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/ammo.js@0.5.3/builds/ammo.wasm.js"></script>
-    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.min.js"></script>
-    <script src="prueba.js"></script>
-    
-    <style>
-        h1 {
-            text-align: center;
-            margin-top: 50vh;
-            transform: translateY(-50%);
-            color: black;
-        }
-        
-    </style>
+  <link rel="stylesheet" href="../styles2.css" type="text/css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homatrix</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ammo.js@0.5.3/builds/ammo.wasm.js"></script>
+  <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.min.js"></script>
+  <script src="prueba.js"></script>
+  <style>
+    h1 {
+      text-align: center;
+      margin-top: 50vh;
+      transform: translateY(-50%);
+      color: black;
+    }
+  </style>
 </head>
-
-    <script>
-        AFRAME.registerComponent('random-position', {
-          init: function () {
-            this.el.setAttribute('position', {
-                x: Math.random() * 20 - 10, // Rango de -10 a 10 para la posición X
-                y: Math.random() * 20 - 10, // Rango de -10 a 10 para la posición Y
-                z: Math.random() * 20 - 10  // Rango de -10 a 10 para la posición Z
-              });
-              
-          },
-          tick: function (time, timeDelta) {
-            var position = this.el.getAttribute('position');
-            position.x += (Math.random() - 0.5) * 0.1; // Random X movement between -0.05 and 0.05
-            position.y += (Math.random() - 0.5) * 0.1; // Random Y movement between -0.05 and 0.05
-            position.z += (Math.random() - 0.5) * 0.1; // Random Z movement between -0.05 and 0.05
-            this.el.setAttribute('position', position);
-          }
+  <script>
+    AFRAME.registerComponent('random-position', {
+      init: function () {
+        this.el.setAttribute('position', {
+          x: Math.random() * 20 - 10, // Rango de -10 a 10 para la posición X
+          y: Math.random() * 20 - 10, // Rango de -10 a 10 para la posición Y
+          z: Math.random() * 20 - 10  // Rango de -10 a 10 para la posición Z
         });
 
-    </script>
+      },
+      tick: function (time, timeDelta) {
+        var position = this.el.getAttribute('position');
+        position.x += (Math.random() - 0.5) * 0.1; // Random X movement between -0.05 and 0.05
+        position.y += (Math.random() - 0.5) * 0.1; // Random Y movement between -0.05 and 0.05
+        position.z += (Math.random() - 0.5) * 0.1; // Random Z movement between -0.05 and 0.05
+        this.el.setAttribute('position', position);
+      }
+    });
+  </script>
 </head>
+
 <body>
   <a-scene>
     <a-entity position="0 2 -5">
       <a-light type="point" intensity="2" distance="10" decay="1"></a-light>
-      <a-entity geometry="primitive: sphere; radius: 0.5" material="color: #FFFF00" animation="property: position; to: 0 2.5 -5; dir: alternate; dur: 2000; loop: true"></a-entity>
+      <a-entity geometry="primitive: sphere; radius: 0.5" material="color: #FFFF00"
+        animation="property: position; to: 0 2.5 -5; dir: alternate; dur: 2000; loop: true"></a-entity>
     </a-entity>
     <a-camera></a-camera>
   </a-scene>
+  <a-scene cursor="rayOrigin: mouse">
+    <a-entity id="vr-player" position="0 1.6 0">
+      <a-camera></a-camera>
+    </a-entity>
 
-  
-  
-    <a-scene cursor="rayOrigin: mouse">
-        <a-entity id="vr-player" position="0 1.6 0">
-            <a-camera></a-camera>
-        </a-entity>
+    <a-sky src="../img/matrix.jpg" color=""></a-sky>
 
-        <a-sky src="../img/matrix.jpg" color=""></a-sky>
-
-
-
-        <a-entity random-position>
-            <a-text value="1" color="lime" align="center" scale="10 10 10"></a-text>
-          </a-entity>
-          <a-entity random-position>
-            <a-text value="0" color="lime" align="center" scale="20 20 20"></a-text>
-          </a-entity><a-entity random-position>
-            <a-text value="1" color="lime" align="center" scale="20 20 20"></a-text>
-          </a-entity><a-entity random-position>
-            <a-text value="0" color="lime" align="center" scale="20 20 20"></a-text>
-          </a-entity><a-entity random-position>
-            <a-text value="1" color="lime" align="center" scale="20 20 20"></a-text>
-          </a-entity><a-entity random-position>
-            <a-text value="0" color="lime" align="center" scale="20 20 20"></a-text>
-          </a-entity><a-entity random-position>
-            <a-text value="1" color="lime" align="center" scale="20 20 20"></a-text>
-          </a-entity><a-entity random-position>
-            <a-text value="1" color="lime" align="center" scale="10 10 10"></a-text>
-          </a-entity><a-entity random-position>
-            <a-text value="0" color="lime" align="center" scale="30 30 30"></a-text>
-          </a-entity><a-entity random-position>
-            <a-text value="1" color="lime" align="center" scale="10 10 10"></a-text>
-          </a-entity><a-entity random-position>
-            <a-text value="0" color="lime" align="center" scale="10 10 10"></a-text>
-          </a-entity><a-entity random-position>
-            <a-text value="1" color="lime" align="center" scale="10 10 10"></a-text>
-          </a-entity>
-          <a-text value="1" color="lime" align="center" scale="10 10 10"></a-text>
-        </a-entity>
-        <a-entity random-position>
-          <a-text value="0" color="lime" align="center" scale="10 10 10"></a-text>
-        </a-entity><a-entity random-position>
-          <a-text value="1" color="lime" align="left" scale="10 10 10"></a-text>
-        </a-entity><a-entity random-position>
-          <a-text value="0" color="lime" align="left" scale="10 10 10"></a-text>
-        </a-entity><a-entity random-position>
-          <a-text value="1" color="lime" align="left" scale="10 10 10"></a-text>
-        </a-entity><a-entity random-position>
-          <a-text value="0" color="lime" align="left" scale="10 10 10"></a-text>
-        </a-entity><a-entity random-position>
-          <a-text value="1" color="lime" align="left" scale="10 10 10"></a-text>
-        </a-entity><a-entity random-position>
-          <a-text value="1" color="lime" align="left" scale="10 10 10"></a-text>
-        </a-entity><a-entity random-position>
-          <a-text value="0" color="lime" align="center" scale="30 30 30"></a-text>
-        </a-entity><a-entity random-position>
-          <a-text value="1" color="lime" align="center" scale="30 30 30"></a-text>
-        </a-entity><a-entity random-position>
-          <a-text value="0" color="lime" align="center" scale="30 30 30"></a-text>
-        </a-entity><a-entity random-position>
-          <a-text value="1" color="lime" align="center" scale="30 30 30"></a-text>
-        </a-entity>
-        <a-text value="1" color="lime" align="center" scale="30 30 30"></a-text>
+    <a-entity random-position>
+      <a-text value="1" color="lime" align="center" scale="10 10 10"></a-text>
+    </a-entity>
+    <a-entity random-position>
+      <a-text value="0" color="lime" align="center" scale="20 20 20"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="1" color="lime" align="center" scale="20 20 20"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="0" color="lime" align="center" scale="20 20 20"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="1" color="lime" align="center" scale="20 20 20"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="0" color="lime" align="center" scale="20 20 20"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="1" color="lime" align="center" scale="20 20 20"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="1" color="lime" align="center" scale="10 10 10"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="0" color="lime" align="center" scale="30 30 30"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="1" color="lime" align="center" scale="10 10 10"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="0" color="lime" align="center" scale="10 10 10"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="1" color="lime" align="center" scale="10 10 10"></a-text>
+    </a-entity>
+    <a-text value="1" color="lime" align="center" scale="10 10 10"></a-text>
+    </a-entity>
+    <a-entity random-position>
+      <a-text value="0" color="lime" align="center" scale="10 10 10"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="1" color="lime" align="left" scale="10 10 10"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="0" color="lime" align="left" scale="10 10 10"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="1" color="lime" align="left" scale="10 10 10"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="0" color="lime" align="left" scale="10 10 10"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="1" color="lime" align="left" scale="10 10 10"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="1" color="lime" align="left" scale="10 10 10"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="0" color="lime" align="center" scale="30 30 30"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="1" color="lime" align="center" scale="30 30 30"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="0" color="lime" align="center" scale="30 30 30"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="1" color="lime" align="center" scale="30 30 30"></a-text>
+    </a-entity>
+    <a-text value="1" color="lime" align="center" scale="30 30 30"></a-text>
     </a-entity>
     <a-entity random-position>
       <a-text value="0" color="lime" align="center" scale="30 30 30"></a-text>
@@ -140,32 +133,32 @@
       <a-text value="1" color="lime" align="left" scale="20 20 20"></a-text>
     </a-entity>
     <a-entity random-position>
-        <a-text value="1" color="lime" align="center" scale="10 10 10"></a-text>
-      </a-entity>
-      <a-entity random-position>
-        <a-text value="0" color="lime" align="center" scale="20 20 20"></a-text>
-      </a-entity><a-entity random-position>
-        <a-text value="1" color="lime" align="center" scale="20 20 20"></a-text>
-      </a-entity><a-entity random-position>
-        <a-text value="0" color="lime" align="center" scale="20 20 20"></a-text>
-      </a-entity><a-entity random-position>
-        <a-text value="1" color="lime" align="center" scale="20 20 20"></a-text>
-      </a-entity><a-entity random-position>
-        <a-text value="0" color="lime" align="center" scale="20 20 20"></a-text>
-      </a-entity><a-entity random-position>
-        <a-text value="1" color="lime" align="center" scale="20 20 20"></a-text>
-      </a-entity><a-entity random-position>
-        <a-text value="1" color="lime" align="center" scale="10 10 10"></a-text>
-      </a-entity><a-entity random-position>
-        <a-text value="0" color="lime" align="center" scale="30 30 30"></a-text>
-      </a-entity><a-entity random-position>
-        <a-text value="1" color="lime" align="center" scale="10 10 10"></a-text>
-      </a-entity><a-entity random-position>
-        <a-text value="0" color="lime" align="center" scale="10 10 10"></a-text>
-      </a-entity><a-entity random-position>
-        <a-text value="1" color="lime" align="center" scale="10 10 10"></a-text>
-      </a-entity>
       <a-text value="1" color="lime" align="center" scale="10 10 10"></a-text>
+    </a-entity>
+    <a-entity random-position>
+      <a-text value="0" color="lime" align="center" scale="20 20 20"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="1" color="lime" align="center" scale="20 20 20"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="0" color="lime" align="center" scale="20 20 20"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="1" color="lime" align="center" scale="20 20 20"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="0" color="lime" align="center" scale="20 20 20"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="1" color="lime" align="center" scale="20 20 20"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="1" color="lime" align="center" scale="10 10 10"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="0" color="lime" align="center" scale="30 30 30"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="1" color="lime" align="center" scale="10 10 10"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="0" color="lime" align="center" scale="10 10 10"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="1" color="lime" align="center" scale="10 10 10"></a-text>
+    </a-entity>
+    <a-text value="1" color="lime" align="center" scale="10 10 10"></a-text>
     </a-entity>
     <a-entity random-position>
       <a-text value="0" color="lime" align="center" scale="10 10 10"></a-text>
@@ -191,82 +184,55 @@
       <a-text value="1" color="lime" align="center" scale="10 10 10"></a-text>
     </a-entity>
     <a-text value="1" color="lime" align="center" scale="10 10 10"></a-text>
-</a-entity>
-<a-entity random-position>
-  <a-text value="0" color="lime" align="center" scale="30 30 30"></a-text>
-</a-entity><a-entity random-position>
-  <a-text value="1" color="lime" align="center" scale="30 30 30"></a-text>
-</a-entity><a-entity random-position>
-  <a-text value="0" color="lime" align="center" scale="10 10 10"></a-text>
-</a-entity><a-entity random-position>
-  <a-text value="1" color="lime" align="center" scale="10 10 10"></a-text>
-</a-entity><a-entity random-position>
-  <a-text value="0" color="lime" align="center" scale="10 10 10"></a-text>
-</a-entity><a-entity random-position>
-  <a-text value="1" color="lime" align="right" scale="10 10 10"></a-text>
-</a-entity><a-entity random-position>
-  <a-text value="1" color="lime" align="right" scale="10 10 10"></a-text>
-</a-entity><a-entity random-position>
-  <a-text value="0" color="lime" align="right" scale="30 30 30"></a-text>
-</a-entity><a-entity random-position>
-  <a-text value="1" color="lime" align="right" scale="30 30 30"></a-text>
-</a-entity><a-entity random-position>
-  <a-text value="0" color="lime" align="right" scale="30 30 30"></a-text>
-</a-entity><a-entity random-position>
-  <a-text value="1" color="lime" align="left" scale="30 30 30"></a-text>
-</a-entity>
+    </a-entity>
+    <a-entity random-position>
+      <a-text value="0" color="lime" align="center" scale="30 30 30"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="1" color="lime" align="center" scale="30 30 30"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="0" color="lime" align="center" scale="10 10 10"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="1" color="lime" align="center" scale="10 10 10"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="0" color="lime" align="center" scale="10 10 10"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="1" color="lime" align="right" scale="10 10 10"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="1" color="lime" align="right" scale="10 10 10"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="0" color="lime" align="right" scale="30 30 30"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="1" color="lime" align="right" scale="30 30 30"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="0" color="lime" align="right" scale="30 30 30"></a-text>
+    </a-entity><a-entity random-position>
+      <a-text value="1" color="lime" align="left" scale="30 30 30"></a-text>
+    </a-entity>
 
+    <a-scene cursor="rayOrigin: mouse">
+      <a-entity id="vr-player" position="0 1.6 0">
+        <a-camera></a-camera>
+      </a-entity>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-       
-          <a-scene cursor="rayOrigin: mouse">
-            <a-entity id="vr-player" position="0 1.6 0">
-              <a-camera></a-camera>
-            </a-entity>
-          
-            <a-sphere color="bluelight" radius="0.1" onclick="redirectToIndex1()"></a-sphere>
-            <script>
-              function redirectToIndex1() {
-                window.location.href = "/acertijo1";
-              }
-            </script>
-          </a-scene>
-
-         
-          </a-entity>
-          
-          <a-entity position="0 3.5 -5">
-            <a-text value="BUSCA LA BOLITA!">  <a href="/acertijo1">PULSA</a> color="#ffffff" align="center" font="https://cdn.aframe.io/fonts/Exo2Bold.fnt" wrap-count="20"></a-text>
-          </a-entity>
-          <a href="/acertijo1">PULSA</a>
-
-
-        <a-entity light="type: point; intensity: 2; color: #ffffff" position="0 5 0"></a-entity>
-        <a-entity light="type: ambient; intensity: 0.5; color: #ffffff"></a-entity>
+      <a-sphere color="bluelight" radius="0.1" onclick="redirectToIndex1()"></a-sphere>
+      <script>
+        function redirectToIndex1() {
+          window.location.href = "/acertijo1";
+        }
+      </script>
     </a-scene>
-    <script src="index.js"></script>
 
+    </a-entity>
+    <a-entity position="0 3.5 -5">
+      <a-text value="BUSCA LA BOLITA Y HAZ CLICK EN ELLA"> <a href="/acertijo1">PULSA</a> color="#ffffff" align="center"
+        font="https://cdn.aframe.io/fonts/Exo2Bold.fnt" wrap-count="20"></a-text>
+    </a-entity>
+    <a href="/acertijo1">PULSA</a>
 
-    
+    <a-entity light="type: point; intensity: 2; color: #ffffff" position="0 5 0"></a-entity>
+    <a-entity light="type: ambient; intensity: 0.5; color: #ffffff"></a-entity>
+  </a-scene>
+  <script src="index.js"></script>
 
 </body>
 </html>

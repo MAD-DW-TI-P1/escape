@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sala de Escape de Ciberseguridad</title>
+    <title>Ciberseguridad</title>
     <link rel="stylesheet" type="text/css" href="salascb.css">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
     integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 </head>
 <body>
-    <canvas id="matrix"></canvas>
-
-    <div id="escape-room">
-        <div id="timer-container">
-            <div id="timer">3:00</div>
-            <div id="timer-bar"></div>
+    <section class="container text-center init">
+        <div class="init">
+            <div id="timer-container">
+                <div id="timer">3:00</div>
+                <div id="timer-bar"></div>
+            </div>
+            <div id="room-container" class="room">
+                <h1 id="room-title"></h1>
+                <br/>
+                <div id="room-counter"></div>
+                <div id="question-container"></div>
+                <br/>
+                <input id="answer-input" type="text" placeholder="Escribe 'Sí' o 'No''">
+                <br/><br/>
+                <button id="submit-button">Enviar</button>
+                <div id="attempt-counter"></div>
+                <br/><br/>
+                <button id="hint-button">Pista</button>
+                <div id="hint-container"></div>
+                <div id="hint-counter"></div>
+            </div> 
         </div>
-        <div id="room-container" class="room">
-            <h1 id="room-title"></h1>
-            <div id="room-counter"></div>
-            <div id="question-container"></div>
-            <input id="answer-input" type="text" placeholder="Escribe tu respuesta aquí">
-            <button id="submit-button">Enviar</button>
-            <div id="attempt-counter"></div>
-            <div id="hint-container"></div>
-            <button id="hint-button">Pista</button>
-            <div id="hint-counter"></div>
-        </div>
-        
-    </div>
+    </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="salascb.js"></script>
-    <script src="../matrix.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-function verificarRespuesta() {
+function verificarRespuesta(e) {
     var respuesta = document.getElementById("respuesta").value.toUpperCase();
     if (respuesta == "K") {
       alert("¡Correcto! Has adivinado la letra cifrada.");

@@ -1,0 +1,47 @@
+.letra {           
+    padding: 10px;
+    border-radius: 3px; 
+    width: 15px;
+    text-align: center;
+}
+
+.eleccion {
+    display: flex;
+    justify-content: space-evenly;
+    width: 200px;
+    margin: 0 auto;
+}
+
+#response {
+    margin-top: 50px;
+    font-size: 24px;
+    text-align: center;
+    background-color: rgb(255, 255, 254);
+}
+
+#alertaRoja {
+    margin-top: 50px;
+    font-size: 20px;
+    text-align: ce0nter;
+    background-color: #f36740;
+    font-style: italic;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+}
+
+#game-container{
+    background-color: black;
+}
+    
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+textarea {
+    width: 498px;
+    height: 173px;
+}

@@ -1,77 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  justify-content: center;
-  font-family: 'Space Mono', monospace;
+input {
+  display:block;
+  margin: 20px 0 40px 0;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  font-family: 'Space Mono', monospace;
-  justify-content: center;
-  align-items: center;
-
+h1 {
+  margin:0px;
 }
-
-/* banner */
-.banner {
-  display: flex;
-  position: relative;
-  align-items: center;
-  background-color: rgba(20, 20, 20, 0.918);
-  color: lime;
-  height: 100px;
-  width: 100%;
-  box-sizing: border-box;
-  align-items: center;
-  margin-bottom: 100px;
-}
-
-form {
-  display: flex;
-  background-color: none;
-  align-items: center;
-}
-
-label {
- margin-right: 10px;
-
-}
-
 
 #contenedor {
-  height: 1000px;
-  width: 100%;
-  background-image: url("../rescue_dog/img/perro.jpg");
+  background-image: url("img/perro.png");
   background-size: cover;
-  color: aliceblue;
-  z-index: 100px;
-  
-}
-
-#contenedor img {
-  height: 1000px;
-  width: 100%;
+  padding: 50px;
 }
 
 .pistas {
   color: lime;
-  background-image: linear-gradient(135deg, rgb(18, 19, 18), rgb(2, 75, 2), #080808, #2f543a);
-  background-size: 500%;
-  animation: animado 10s infinite;
-  padding: 100px;
+  /*background-image: linear-gradient(135deg, rgb(18, 19, 18), rgb(2, 75, 2), #080808, #2f543a);*/
+  background-color: rgba(256, 256, 256, 0.3);
+  padding: 20px;
 }
 
 .pistas p {
-  margin-left: 20px;
-}
-
-.preguntas {
-  background-color: rgba(25, 27, 28, 0.393);
   margin-left: 20px;
 }
 
@@ -81,77 +31,4 @@ label {
   text-align: center;
   margin: 100px 0;
   font-size: 20px;
-}
-
-.enviar-btn {
-  padding: 10px;
-  background: lime;
-  border-radius: 10px;
-  border: 1px solid white;
-  color: black;
-}
-
-section#contenedor {
-  background-color: black;
-}
-
-button {
-  font-family: 'Space Mono', monospace;
-  padding: 6px 12px;
-  background: lime;
-  outline: none;
-  border-radius: 10px;
-  border: 1px solid white;
-  color: black;
-  margin: 20px;
-}
-
-button:hover {
-  background: rgb(8, 184, 8);
-}
-
-.contrasena {
-  color: lime;
-  background-color: black;
-  width: 100%;
-  height: 300px;
-  margin: 50px auto;
-  justify-content: center;
-  padding-bottom: 20px;
-}
-.contrasena p{ 
-  margin: 20px;
-}
-.contrasena h1{ 
-  padding-left: 10px;
-  margin: 10px;
-}
-
-input {
-  margin: 10px;
-}
-
-.negro {
-  background-color: black;
-}
-
-/*.boton-menu.active {
-  background-color: var(--clr-white);
-  color: var(--clr-main);
-  border-top-left-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-  position: relative;
-}*/
-
-
-@keyframes animado {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  1500% {
-    background-position: 0% 50%;
-  }
 }

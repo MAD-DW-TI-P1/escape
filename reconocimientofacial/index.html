@@ -51,7 +51,7 @@
                 maxPredictions = model.getTotalClasses();
 
                 // Convenience function to setup a webcam
-                const size = 400;
+                const size = 300;
                 const flip = true; // whether to flip the webcam
                 webcam = new tmPose.Webcam(size, size, flip); // width, height, flip
                 await webcam.setup(); // request access to the webcam
@@ -106,7 +106,7 @@
 
             function personaReconocida() {
                 console.log("La cadena contiene '1.0'.");
-                mensaje = `¡Eres una persona! ¡Corre mete esta url: ${urlNext} y continúa avanzando!`;
+                mensaje = `¡Eres una persona! ¡Cambia la url por ${urlNext} y continúa!`;
                 document.getElementById('persona').classList.remove('invisible');
                 document.getElementById('persona').getElementsByTagName('p')[0].innerHTML = mensaje; 
             }
@@ -114,6 +114,7 @@
             function check() {
                 label = document.getElementById('label-container');
                 persona = label.getElementsByTagName('div')[0];
+                document.getElementsByTagName('button')[0].classList.add('invisible');
                 if (persona.textContent.includes("1.0")) {
                     setTimeout(() => {
                         personaReconocida()

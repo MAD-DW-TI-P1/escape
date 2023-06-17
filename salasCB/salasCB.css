@@ -1,33 +1,3 @@
-/* Tipografía */
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Space Mono', monospace;
-    text-align: center;
-    }
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: #fff;
-}
-
-#escape-room {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    max-width: 800px;
-    border: 2px solid lime;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: #222;
-}
-
 #timer-container {
     display: flex;
     flex-direction: column;
@@ -44,12 +14,7 @@ body {
 #timer-bar {
     width: 100%;
     height: 10px;
-    background-color: lime;
-}
-
-#matrix {
-    z-index: -100;
-    position: absolute;
+    background-color: red;
 }
 
 .room {
@@ -60,27 +25,8 @@ body {
     display: block;
 }
 
-.room h1 {
-    margin-bottom: 1em;
-}
-
 #question-container {
     margin-bottom: 1em;
-}
-
-#submit-button,
-#hint-button {
-    background-color: lime;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-}
-
-#submit-button:hover,
-#hint-button:hover {
-    background-color: limegreen;
 }
 
 #hint-container {
@@ -90,7 +36,6 @@ body {
 #hint-button {
     background-color: #00f;
     color: #fff;
-    margin-left: 1em;
 }
 
 .blinking-element {

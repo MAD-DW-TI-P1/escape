@@ -13,13 +13,14 @@ body {
 
 }
 
-button, a.destacado {
+button, a.destacado, #loginButton {
     padding: 10px!important;
     background: lime!important;
     outline: none!important;
     border-radius: 10px!important;
     border: 1px solid white!important;
     color: black!important;
+    font-family: sans-serif, arial!important;
 }
 
 #matrix {
@@ -37,8 +38,14 @@ div.init {
     padding:5%;
     margin: 5%;
 }
+
 div.init img {
     width: 100%;
+}
+
+input {
+    color:black!important;
+    padding: 10px;
 }
 
 

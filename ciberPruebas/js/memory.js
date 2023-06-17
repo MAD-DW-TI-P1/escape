@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         cards[optionOneId].setAttribute('src', 'img/blank.png')
         cards[optionTwoId].setAttribute('src', 'img/blank.png')
-        alert('Lo siento, inténtalo de nuevo')
+        //alert('Lo siento, inténtalo de nuevo')
       }
       cardsChosen = []
       cardsChosenId = []

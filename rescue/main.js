@@ -6,7 +6,7 @@ var preguntas = [
     },
     {
         pregunta: "2. ¿Cuántos movimientos debe hacer el barquero para pasar de un lado del río al otro a un lobo, una oveja y una lechuga sin que se coman unos a otros?",
-        respuesta: "8",
+        respuesta: "7",
         tokenParte: "32"
     },
     {
@@ -35,7 +35,7 @@ var preguntas = [
         tokenParte: "13112221"
     },
     {
-        pregunta: "8. El camino que recorriste +1 punto te dará la respuesta para liberarme, junta las claves de las respuestas y verifica si el token es seguro.",
+        pregunta: "8. Escribe:  + 1 punto y te dará la respuesta",
         respuesta: "+.",
         tokenParte: "+."
     }
@@ -85,9 +85,11 @@ enviarBtn.addEventListener('click', function(event) {
         mostrarSiguientePregunta();
 
         var tokenParcial = pregunta.tokenParte;
-        var mensajeToken = document.createElement('h3');
-        mensajeToken.textContent = "Token parcial: " + tokenParcial;
+        //var mensajeToken = document.createElement('h3');
+        //mensajeToken.textContent = "Token parcial: " + tokenParcial;
         preguntasContainer.appendChild(mensajeToken);
+    }else {
+        alert('Prueba otra vez')
     }
 });
 
