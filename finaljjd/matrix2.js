@@ -1,3 +1,11 @@
+const abejita = document.querySelector('.abeja');
+
+
+abejita.addEventListener('click', function () {
+
+  window.location.href = 'https://github.com/signados/escape/tree/main';
+});
+
 const canvas = document.getElementById('matrixCanvas');
 const ctx = canvas.getContext('2d');
 
@@ -103,3 +111,5 @@ class MatrixStreamColumn {
 
 window.addEventListener('resize', resizeCanvas);
 resizeCanvas();
+
+
