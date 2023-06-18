@@ -1,6 +1,6 @@
 
 <p align="center"> 
-  <img src="https://github.com/signados/escape/blob/main/present/foto-portada.png" width="550" height="550">
+  <img src="https://github.com/signados/escape/blob/main/img/present.png">
 </p>
 
 
@@ -20,14 +20,9 @@ Recuerda que en este mundo, el todo es más que la suma de las partes. ¡Demuest
 ---
 ## Pruebas
 
-<p align="center">
-  <img src="" width="" height="">
-  <img src="" width="" height="">
-</p>
+<img src="https://github.com/signados/escape/blob/main/img/present2.png">
 
-<p align="center">
-  <img src="" width="" height="">
-</p>
+<img src="https://github.com/signados/escape/blob/main/img/present3.png">
 
 ---
 
