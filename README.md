@@ -36,3 +36,11 @@ Recuerda que en este mundo, el todo es más que la suma de las partes. ¡Demuest
   <img src="https://github.com/signados/escape/blob/main/img/aframe-logo.png" width="75" height="75">
   <img src="https://user-images.githubusercontent.com/25181517/183898054-b3d693d4-dafb-4808-a509-bab54cf5de34.png" width="75" height="75">
 </p>
+
+---
+
+## TODO <br>
+
+- Pasar a React y Symfony 
+- Encriptar las respuestas de JS o pasarlas al back
+- Versión móvil
